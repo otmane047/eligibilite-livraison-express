@@ -12,11 +12,13 @@ import uvicorn
 # Ajoute la racine au PYTHONPATH
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
+from app.core.config import API_HOST, API_PORT
+
 
 def main():
     parser = argparse.ArgumentParser(description="Lance le serveur API FastAPI.")
-    parser.add_argument("--host", type=str, default="127.0.0.1", help="Hôte d'écoute")
-    parser.add_argument("--port", type=int, default=8000, help="Port d'écoute")
+    parser.add_argument("--host", type=str, default=API_HOST, help=f"Hôte d'écoute (défaut: {API_HOST})")
+    parser.add_argument("--port", type=int, default=API_PORT, help=f"Port d'écoute (défaut: {API_PORT})")
     parser.add_argument("--reload", action="store_true", default=True, help="Rechargement à chaud")
     args = parser.parse_args()
 

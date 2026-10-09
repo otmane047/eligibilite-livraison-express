@@ -57,6 +57,7 @@ tp1/
 ├── scripts/                   # Scripts d'automatisation et CLI
 │   ├── run_server.py          # Lancement de l'API Uvicorn
 │   └── train.py               # Entraînement du modèle
+├── .env.example               # Modèle de variables d'environnement
 └── openapi.yml                # Contrat OpenAPI de référence
 ```
 
@@ -74,7 +75,17 @@ tp1/
 pip install -r app/requirements.txt
 ```
 
-### 3.2. Entraînement du modèle (Génération des artefacts)
+### 3.2. Configuration de l'environnement (.env)
+
+Copiez le fichier d'exemple pour initialiser votre configuration locale :
+
+```bash
+copy .env.example .env
+```
+
+Vous pouvez y ajuster `DATABASE_URL`, `DEFAULT_THRESHOLD`, `API_PORT`, etc.
+
+### 3.3. Entraînement du modèle (Génération des artefacts)
 
 Pour exécuter le pipeline d'entraînement complet, calculer les métriques et générer les fichiers dans `artifacts/` :
 
@@ -87,7 +98,7 @@ python scripts/train.py
 python scripts/train.py --no-mlflow
 ```
 
-### 3.3. Lancement de l'API
+### 3.4. Lancement de l'API
 
 Démarrez le serveur FastAPI :
 

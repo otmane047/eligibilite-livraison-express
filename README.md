@@ -100,14 +100,18 @@ python scripts/train.py --no-mlflow
 
 ### 3.4. Lancement de l'API
 
-Démarrez le serveur FastAPI :
+Démarrez le serveur FastAPI simplement avec :
 
 ```bash
-python scripts/run_server.py
+python main.py
 ```
-ou directement avec Uvicorn :
+ou avec Uvicorn en CLI :
 ```bash
-uvicorn app.api.main:app --host 127.0.0.1 --port 8000 --reload
+uvicorn main:app --reload
+```
+ou via le script dédié :
+```bash
+python scripts/run_server.py
 ```
 
 L'API est alors disponible sur :

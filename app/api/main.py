@@ -15,8 +15,8 @@ from app.api.routes import api_router
 from app.core.config import API_TITLE, API_VERSION, ARTIFACTS_DIR, MODEL_VERSION
 from app.core.exceptions import AppBaseException
 from app.core.schemas import Error
-from app.infra.local_model_store import LocalModelArtifactStore
-from app.infra.sqlite_order_store import SqliteOrderStore
+from app.infrastructure.local_model_store import LocalModelArtifactStore
+from app.infrastructure.sqlite_order_store import SqliteOrderStore
 from app.services.predictor import PredictorService
 
 logger = logging.getLogger("uvicorn.error")

@@ -29,24 +29,23 @@ tp1/
 │   │   ├── config.py          # Constantes, features, chemins d'artefacts
 │   │   ├── exceptions.py      # Hiérarchie d'exceptions typées
 │   │   └── schemas.py         # Schémas Pydantic V2 conformes à openapi.yml
-│   ├── infra/                 # Adaptateurs d'infrastructure concrets
+│   ├── infrastructure/        # Adaptateurs d'infrastructure concrets
 │   │   ├── in_memory_order_store.py  # Store en mémoire (tests isolés)
 │   │   ├── local_model_store.py      # Chargement des artefacts Joblib/JSON
 │   │   └── sqlite_order_store.py     # Store persistant SQLite local
 │   ├── interfaces/            # Ports / Contrats d'abstraction (ABC)
 │   │   ├── model_store.py     # Interface abstraite ModelArtifactStore
 │   │   └── order_store.py     # Interface abstraite OrderStore
-│   ├── services/              # Logique métier & Pipeline ML
-│   │   ├── data_generator.py  # Générateur de commandes synthétiques
-│   │   ├── data_quality.py    # Contrôles qualité et nettoyage ETL
-│   │   ├── predictor.py       # Moteur d'inférence unitaire et batch
-│   │   └── trainer.py         # Entraînement Scikit-learn & MLflow
-│   ├── tests/                 # Suite complète de tests unitaires et d'intégration
-│   │   ├── test_api.py
-│   │   ├── test_data_quality.py
-│   │   ├── test_infra.py
-│   │   └── test_predictor.py
-│   └── requirements.txt
+│   └── services/              # Logique métier & Pipeline ML
+│       ├── data_generator.py  # Générateur de commandes synthétiques
+│       ├── data_quality.py    # Contrôles qualité et nettoyage ETL
+│       ├── predictor.py       # Moteur d'inférence unitaire et batch
+│       └── trainer.py         # Entraînement Scikit-learn & MLflow
+├── tests/                     # Suite complète de tests unitaires et d'intégration
+│   ├── test_api.py
+│   ├── test_data_quality.py
+│   ├── test_infra.py
+│   └── test_predictor.py
 ├── artifacts/                 # Artefacts versionnés générés par l'entraînement
 │   ├── express_delivery_model.joblib
 │   ├── features.json
@@ -58,7 +57,8 @@ tp1/
 │   ├── run_server.py          # Lancement de l'API Uvicorn
 │   └── train.py               # Entraînement du modèle
 ├── .env.example               # Modèle de variables d'environnement
-└── openapi.yml                # Contrat OpenAPI de référence
+├── openapi.yml                # Contrat OpenAPI de référence
+└── requirements.txt           # Dépendances du projet
 ```
 
 ---
@@ -69,10 +69,10 @@ tp1/
 
 ```bash
 # Activation de l'environnement virtuel (sous Windows)
-.\app\.venv\Scripts\activate
+.\.venv\Scripts\activate
 
 # Installation des dépendances
-pip install -r app/requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 3.2. Configuration de l'environnement (.env)
@@ -136,7 +136,7 @@ L'API est alors disponible sur :
 Le projet comprend **19 tests automatisés** couvrant la qualité des données, l'inférence, les adaptateurs d'infrastructure et les routes de l'API :
 
 ```bash
-python -m unittest discover -s app/tests -v
+python -m unittest discover -s tests -v
 ```
 
 Tous les tests s'exécutent en isolation sans dépendance de réseau externe.

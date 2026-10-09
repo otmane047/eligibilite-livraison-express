@@ -12,8 +12,8 @@ from app.api.routes.orders import create_order, get_order
 from app.api.routes.predictions import create_batch_predictions, create_prediction
 from app.core.exceptions import OrderNotFoundError
 from app.core.schemas import BatchPredictionRequest, OrderFeatures
-from app.infra.in_memory_order_store import InMemoryOrderStore
-from app.infra.local_model_store import LocalModelArtifactStore
+from app.infrastructure.in_memory_order_store import InMemoryOrderStore
+from app.infrastructure.local_model_store import LocalModelArtifactStore
 from app.services.predictor import PredictorService
 
 

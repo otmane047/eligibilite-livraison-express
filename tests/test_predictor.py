@@ -5,7 +5,7 @@ Aligné sur la cellule 39 du notebook.
 
 import unittest
 from app.core.schemas import OrderFeatures
-from app.infra.local_model_store import LocalModelArtifactStore
+from app.infrastructure.local_model_store import LocalModelArtifactStore
 from app.services.predictor import PredictorService
 
 

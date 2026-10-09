@@ -36,7 +36,7 @@ from app.core.config import (
     RANDOM_STATE,
     TARGET_COLUMN,
 )
-from app.infra.local_model_store import LocalModelArtifactStore
+from app.infrastructure.local_model_store import LocalModelArtifactStore
 from app.services.data_generator import generate_orders_dataset
 from app.services.data_quality import clean_orders_data, validate_dataset
 

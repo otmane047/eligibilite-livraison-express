@@ -8,9 +8,9 @@ import tempfile
 import unittest
 
 from app.core.schemas import OrderFeatures
-from app.infra.in_memory_order_store import InMemoryOrderStore
-from app.infra.local_model_store import LocalModelArtifactStore
-from app.infra.sqlite_order_store import SqliteOrderStore
+from app.infrastructure.in_memory_order_store import InMemoryOrderStore
+from app.infrastructure.local_model_store import LocalModelArtifactStore
+from app.infrastructure.sqlite_order_store import SqliteOrderStore
 
 
 class TestInfraStores(unittest.TestCase):

@@ -1,11 +1,10 @@
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
-joblib
-mlflow
+# ── Dépendances de production (API & Modèle) ───────────────────
 fastapi
 uvicorn
 pydantic
 python-dotenv
+pandas
+numpy
+scikit-learn
+joblib
+mlflow

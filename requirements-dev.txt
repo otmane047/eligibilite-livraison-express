@@ -1,0 +1,14 @@
+# ── Dépendances de développement & tests ───────────────────────
+-r requirements.txt
+
+# Tests automatisés & assertions HTTP
+pytest
+pytest-cov
+httpx
+
+# Visualisation & Analyse exploratoire (Notebooks)
+matplotlib
+seaborn
+
+# Qualité de code & formatage
+ruff

@@ -58,7 +58,8 @@ tp1/
 │   └── train.py               # Entraînement du modèle
 ├── .env.example               # Modèle de variables d'environnement
 ├── openapi.yml                # Contrat OpenAPI de référence
-└── requirements.txt           # Dépendances du projet
+├── requirements.txt           # Dépendances de production (API & Inférence)
+└── requirements-dev.txt       # Dépendances de développement & tests
 ```
 
 ---
@@ -71,8 +72,11 @@ tp1/
 # Activation de l'environnement virtuel (sous Windows)
 .\.venv\Scripts\activate
 
-# Installation des dépendances
+# Dépendances de production uniquement :
 pip install -r requirements.txt
+
+# OU dépendances complètes de développement (tests, linters, visualisation) :
+pip install -r requirements-dev.txt
 ```
 
 ### 3.2. Configuration de l'environnement (.env)

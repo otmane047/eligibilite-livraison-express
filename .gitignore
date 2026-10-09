@@ -1,0 +1,31 @@
+# Environments
+.venv/
+venv/
+env/
+ENV/
+
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Testing & linting
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MLflow runs & databases
+mlruns/
+*.db
+*.sqlite
+*.sqlite3
+
+# OS files
+.DS_Store
+Thumbs.db

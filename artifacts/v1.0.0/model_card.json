@@ -1,0 +1,36 @@
+{
+  "project": "eligibilite-livraison-express",
+  "model_version": "1.0.0",
+  "model_type": "Logistic regression",
+  "task": "binary classification",
+  "target": "express_eligible",
+  "threshold": 0.5,
+  "trained_at": "2026-10-09T09:52:31.456805",
+  "features": [
+    "hour",
+    "day_of_week",
+    "weekend",
+    "distance_km",
+    "order_value_eur",
+    "weight_kg",
+    "stock_available",
+    "preparation_time_min",
+    "carrier_capacity",
+    "weather",
+    "delivery_zone",
+    "customer_type"
+  ],
+  "metrics": {
+    "accuracy": 0.7683,
+    "precision": 0.9304,
+    "recall": 0.7632,
+    "f1_score": 0.8386,
+    "roc_auc": 0.849
+  },
+  "limitations": [
+    "Le jeu de donn\u00e9es utilis\u00e9 est synth\u00e9tique.",
+    "La d\u00e9cision ne doit pas \u00eatre utilis\u00e9e sans validation des r\u00e8gles m\u00e9tier.",
+    "Les performances peuvent varier sur des donn\u00e9es r\u00e9elles.",
+    "Le mod\u00e8le ne remplace pas une analyse des contraintes op\u00e9rationnelles."
+  ]
+}
